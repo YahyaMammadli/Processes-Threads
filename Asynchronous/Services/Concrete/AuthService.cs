@@ -41,7 +41,7 @@ namespace Program.Services.Concrete
             if (string.IsNullOrWhiteSpace(password))
                 return (false, "Password cannot be empty.\n");
 
-            if (password.Length > 8)
+            if (password.Length < 8)
                 return (false, "Password must be at least 8 characters long.\n");
 
             if (!password.Any(char.IsUpper))
